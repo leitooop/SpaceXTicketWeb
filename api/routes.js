@@ -4,11 +4,11 @@ var controller = require('./controller');
 var validation = require ('../validations/validation');
 
 
-const validationResultUtil = require('../utils/validationResultsUtil');
+const validationResultUtil = require('../validations/validationResultsUtil');
 
 var router = (app) => {
 console.log(validation())
-   app.route('/api/v1/cards')
+   app.route('/')
        .post(validation(),validationResultUtil, controller.CardController);
 };
 
