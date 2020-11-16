@@ -3,7 +3,8 @@
 var Trello = require("../service/trelloService");
 
 var controllers = {
-  CardController: function (req, res, next) {
+  TrelloController: function (req, res, next) {
+    
     if (req.body.type === "issue") {
       Trello.createIssue(req.body.title, req.body.description, function (
         error,
@@ -13,7 +14,7 @@ var controllers = {
         if (!error) {
           res.status(201).send(response);
         } else {
-          res.status(400).send(error);
+          res.status(500).send(error);
         }
       });
     }
@@ -27,7 +28,7 @@ var controllers = {
           if (!error) {
             res.status(201).send(response);
           } else {
-            res.status(400).send(error);
+            res.status(500).send(error);
           }
         }
       );
@@ -38,7 +39,7 @@ var controllers = {
         if (!error) {
           res.status(201).send(response);
         } else {
-          res.status(400).send(error);
+          res.status(500).send(error);
         }
       });
     }

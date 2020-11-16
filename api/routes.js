@@ -9,7 +9,7 @@ const validationResultUtil = require('../validations/validationResultsUtil');
 var router = (app) => {
 
    app.route('/')
-       .post(validation(),validationResultUtil, controller.CardController);
+       .post(validation(),validationResultUtil, controller.TrelloController);
 };
 
 module.exports = router
