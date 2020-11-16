@@ -32,8 +32,7 @@ npm install
 2.	Go to your Trello Board
 3.	Make a new card in To-Do List with 4 labels ( Bug, Maintenance, Research, Test )
 4.	Open Card in To-Do List
-5.	Add ".json" to end of the URL
-That will look something like this
+5.	Add ".json" to end of the URL. That will look something like this
 
 ```
 https://trello.com/c/93GepXXX/nameofcard.json
