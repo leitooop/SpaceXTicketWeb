@@ -7,7 +7,6 @@ var router = require ("./api/routes");
 app.use(bodyParser.json());
 
 app.use(function(err, req, res, next) {
-    console.log
     console.error(err.stack);
     res.status(500).send('Something broke!');
   });

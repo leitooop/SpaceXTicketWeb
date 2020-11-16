@@ -9,8 +9,7 @@ var controllers = {
         error,
         response
       ) {
-        console.log(error);
-        console.log(response);
+
         if (!error) {
           res.status(201).send(response);
         } else {
@@ -24,8 +23,7 @@ var controllers = {
         req.body.description,
         req.body.category,
         function (error, response) {
-          console.log(error);
-          console.log(response);
+
           if (!error) {
             res.status(201).send(response);
           } else {
@@ -36,8 +34,7 @@ var controllers = {
     }
     if (req.body.type === "bug") {
       Trello.createBug(req.body.description, function (error, response) {
-        console.log(error);
-        console.log(response);
+
         if (!error) {
           res.status(201).send(response);
         } else {

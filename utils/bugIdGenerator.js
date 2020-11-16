@@ -10,7 +10,7 @@ function GenerateBugID() {
   }
   number = Math.floor(Math.random() * (9 - 0));
   const UniqueChar = "BUG-" + word + "-" + number;
-  console.log("random", UniqueChar);
+
   return UniqueChar;
 }
 module.exports = GenerateBugID;
